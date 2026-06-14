@@ -135,8 +135,8 @@ nav a:hover{
 /* Hero Image */
 
 .hero-image img{
-    width:400px;
-    height:400px;
+    width:360px;
+    height:550px;
     object-fit:cover;
     border-radius:50%;
     border:6px solid #8b5cf6;
@@ -145,6 +145,9 @@ nav a:hover{
     0 0 80px rgba(139,92,246,.2);
     animation:float 4s ease-in-out infinite;
     
+}
+.img{
+    margin-top: 50%;
 }
 
 
@@ -336,10 +339,75 @@ footer{
     padding:40px 20px;
     border-top:1px solid rgba(255,255,255,.08);
 }
-
+.footer-text{
+    font-size:11px;
+    color:rgba(255,255,255,0.35);
+    position:fixed;
+    bottom:12px;
+    left:15px;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
 footer h3{
     color:#8b5cf6;
     margin-bottom:10px;
+}
+ .whatsapp-btn{
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 65px;
+    height: 65px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    transition: all .3s ease;
+    z-index: 9999;
+    animation: whatsappBounce 2s infinite;
+}
+
+.whatsapp-btn:hover{
+    transform: scale(1.15);
+    background: #1EBE5D;
+    box-shadow: 0 12px 30px rgba(37,211,102,.5);
+}
+
+.whatsapp-btn i{
+    font-size: 34px;
+}
+
+/* Floating Animation */
+@keyframes whatsappBounce{
+    0%,20%,50%,80%,100%{
+        transform: translateY(0);
+    }
+    40%{
+        transform: translateY(-10px);
+    }
+    60%{
+        transform: translateY(-5px);
+    }
+}
+
+/* Mobile */
+@media(max-width:768px){
+    .whatsapp-btn{
+        width:55px;
+        height:55px;
+        font-size:28px;
+        bottom:20px;
+        right:20px;
+    }
+
+    .whatsapp-btn i{
+        font-size:28px;
+    }
 }
 
 /* Responsive */
@@ -360,8 +428,8 @@ footer h3{
     }
 
     .hero-image img{
-        width:280px;
-        height:280px;
+        width:310px;
+        height:500px;
     }
 
     .contact-container{
